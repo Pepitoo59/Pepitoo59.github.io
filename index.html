@@ -3,9 +3,12 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0
 /aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-	<a-scene arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'></a-scene>
+	<a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+</a-scene>
 		<a-plane src="textures/20181107_235300.jpg"height="0.5" width="0.5" color="grey" position = "0 0.5 0"></a-plane>
-		<a-marker type='barcode' value='5'></a-marker>
+		<a-marker type='barcode' value='5'>
+			<a-plane src="textures/20181107_235300.jpg"height="0.5" width="0.5" color="grey" position = "0 0.5 0"></a-plane>
+	</a-marker>
 </body>
 
 
